@@ -299,7 +299,7 @@
 
             <div class="form-group" id="bank-code-group">
                 <label for="bank-code" class="form-label">匯款帳號後5碼 *</label>
-                <h5>匯款帳號：中國信託 (822) 2675 4018 1455</h5>
+                <h5>匯款帳號：(822) 2675 4018 1455</h5>
                 <input type="text" id="bank-code" name="entry.1279546451" class="form-input" required maxlength="5" placeholder="請輸入匯款帳號後5碼">
             </div>
 
@@ -323,7 +323,11 @@
         </form>
 
         <div id="successMessage" class="success-message">
-            🎉 報名成功！記得9/13要準時到永安市民活動中心哦～
+            🎉 報名成功！記得9/13要準時哦！
+        </div>
+
+        <div id="notcomingMessage" class="success-message">
+            🎉 雖然當天不會見，但還是感謝你填寫哦！
         </div>
 
         <div id="errorMessage" class="error-message">
@@ -342,6 +346,7 @@
             const btnText = document.querySelector('.btn-text');
             const loading = document.querySelector('.loading');
             const successMessage = document.getElementById('successMessage');
+            const notcomingMessage = document.getElementById('notcomingMessage');
             const errorMessage = document.getElementById('errorMessage');
             
             // 顯示載入狀態
@@ -350,6 +355,7 @@
             loading.style.display = 'block';
             
             // 隱藏之前的訊息
+            notcomingMessage.style.display = 'none';
             successMessage.style.display = 'none';
             errorMessage.style.display = 'none';
             
@@ -365,13 +371,21 @@
                 });
                 
                 // 顯示成功訊息
-                successMessage.style.display = 'block';
+                if (attendNo.checked) {
+                    successMessage.style.display = 'block';
+                }
+                else{
+                    notcomingMessage.style.display = 'block';
+                }
                 this.reset(); // 清空表單
                 
                 // 3秒後淡出成功訊息
                 setTimeout(() => {
                     successMessage.style.opacity = '0';
+                    notcomingMessage.style.opacity = '0';
                     setTimeout(() => {
+                        notcomingMessage.style.display = 'none';
+                        notcomingMessage.style.opacity = '1';
                         successMessage.style.display = 'none';
                         successMessage.style.opacity = '1';
                     }, 300);
