@@ -402,11 +402,73 @@
         });
 
         // 自動計算費用和匯款金額
+        const attendYes = document.getElementById('attend-yes');
+        const attendNo = document.getElementById('attend-no');
+        const teamMembersGroup = document.getElementById('team-members-group');
+        const totalPeopleGroup = document.getElementById('total-people-group');
+        const totalAmountGroup = document.getElementById('total-amount-group');
+        const bankCodeGroup = document.getElementById('bank-code-group');
+        
         const totalPeopleInput = document.getElementById('total-people');
         const totalAmountInput = document.getElementById('total-amount');
         const bankCodeLabel = document.querySelector('label[for="bank-code"]');
+        const teamMembersInput = document.getElementById('team-members');
         const originalBankText = bankCodeLabel.textContent;
+        
+        function toggleAttendanceFields() {
+            if (attendNo.checked) {
+                // 平滑隱藏相關欄位
+                [teamMembersGroup, totalPeopleGroup, totalAmountGroup, bankCodeGroup].forEach(group => {
+                    group.style.opacity = '0';
+                    group.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        group.style.display = 'none';
+                    }, 300);
+                });
+                
+                // 設置默認值
+                totalPeopleInput.value = '0';
+                totalAmountInput.value = '0';
+                bankCodeInput.value = '00000';
+                teamMembersInput.value = '';
+                
+                // 移除必填屬性
+                totalPeopleInput.removeAttribute('required');
+                totalAmountInput.removeAttribute('required');
+                bankCodeInput.removeAttribute('required');
+                
+                // 重置樣式
+                totalAmountInput.style.borderColor = '#e1e5e9';
+                totalAmountInput.style.backgroundColor = '#fff';
+                bankCodeLabel.textContent = originalBankText;
+                
+            } else if (attendYes.checked) {
+                // 平滑顯示相關欄位
+                [teamMembersGroup, totalPeopleGroup, totalAmountGroup, bankCodeGroup].forEach(group => {
+                    group.style.display = 'block';
+                    group.style.opacity = '0';
+                    group.style.transform = 'translateY(-10px)';
+                    setTimeout(() => {
+                        group.style.opacity = '1';
+                        group.style.transform = 'translateY(0)';
+                    }, 50);
+                });
+                
+                // 清空默認值
+                totalPeopleInput.value = '';
+                totalAmountInput.value = '';
+                bankCodeInput.value = '';
+                
+                // 恢復必填屬性
+                totalPeopleInput.setAttribute('required', 'required');
+                totalAmountInput.setAttribute('required', 'required');
+                bankCodeInput.setAttribute('required', 'required');
+            }
+        }
 
+        // 監聽是否參加的變化
+        attendYes.addEventListener('change', toggleAttendanceFields);
+        attendNo.addEventListener('change', toggleAttendanceFields);
         totalPeopleInput.addEventListener('input', function() {
             const people = parseInt(this.value) || 0;
             const totalFee = people * 2000;
