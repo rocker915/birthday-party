@@ -240,15 +240,15 @@
         <div class="form-header">
             <h1 class="form-title">紅圍巾ㄉ30歲生日辦桌</h1>
             <p class="form-subtitle">🎉 日期：9/13 預計下午1點準時開宴</p>
-            <p class="form-subtitle">📍 <strong>地點：</strong>永安市民活動中心（新北市永和區安樂路431號）</p>
-            <p class="form-subtitle">🚇 <strong>交通：</strong>永安市場捷運站步行約7分鐘</p>
+            <p class="form-subtitle">📍 地點：永安市民活動中心（新北市永和區安樂路431號）</p>
+            <p class="form-subtitle">🚇 交通：永安市場捷運站步行約7分鐘</p>
         </div>
 
         <form id="customForm">
             <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 15px; margin-bottom: 25px; border-left: 4px solid rgb(103, 58, 183);">
                 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #444;">
-                    要30了，想辦個有趣的生日趴然後又很想吃辦桌，希望大家可以玩得開心然後也因為我認識讚朋友，當然最重要的是我也要開心，所以可以開始思考要送我的禮物了謝謝😄<br><br>
-                    不一定要送禮物啦，但知道我收到甚麼會開心的話，很樂意接收哈哈哈哈，寫個卡片或甚至只要出席就很棒了，也歡迎乾爹乾媽贊助酒水設備或其他東西，我會把你的名字標得很大，然後想致詞還是表演的歡迎跟我說 🎤✨
+                    要30了，想辦個有趣的生日趴然後又很想吃辦桌，希望大家可以玩得開心然後也因為我認識讚朋友，當然最重要的是我也要開心，所以可以思考要送我的禮物了謝謝😄<br><br>
+                    寫個卡片或只要出席就很棒了，然後歡迎乾爹乾媽贊助酒水設備或其他東西，想致詞還是表演的歡迎跟我說 🎤✨
                 </p>
             </div>
 
@@ -282,8 +282,8 @@
             </div>
 
             <div class="form-group">
-                <label for="team-members" class="form-label">如果想要組隊參加請填他(們)的名字</label>
-                <input type="text" id="team-members" name="entry.815497036" class="form-input" placeholder="組隊成員姓名（選填）">
+                <label for="team-members" class="form-label">如果要組隊參加請填他(們)的名字</label>
+                <input type="text" id="team-members" name="entry.815497036" class="form-input" placeholder="隊員姓名（選填）">
             </div>
 
             <div class="form-group">
@@ -292,13 +292,13 @@
             </div>
 
             <div class="form-group" style="display: none;">
-                <label for="total-amount" class="form-label">請填你匯的總金額（2000*總人數）*</label>
+                <label for="total-amount" class="form-label">請填你匯的總金額（2000*總人數）</label>
                 <input type="number" id="total-amount" name="entry.1088256305" class="form-input" required min="2000" step="2000" placeholder="請輸入匯款總金額">
             </div>
 
             <div class="form-group">
                 <label for="bank-code" class="form-label">匯款帳號後5碼 *</label>
-                <h6>匯款帳號：(822) 2675 4018 1455</h6>
+                <h5>匯款帳號：(822) 2675 4018 1455</h5>
                 <input type="text" id="bank-code" name="entry.1279546451" class="form-input" required maxlength="5" placeholder="請輸入匯款帳號後5碼">
             </div>
 
@@ -414,7 +414,7 @@
                 // 自動填入匯款金額
                 totalAmountInput.value = totalFee;
                 // 更新標籤顯示應付金額
-                bankCodeLabel.innerHTML = `${originalBankText} <span style="color: #e74c3c; font-weight: bold;">(應付金額: ${totalFee.toLocaleString()}元)</span>`;
+                bankCodeLabel.innerHTML = `${originalBankText} <span style="color: #e74c3c; font-weight: bold;">(入桌費共: ${totalFee.toLocaleString()}元)</span>`;
                 // 添加視覺提示
                 totalAmountInput.style.borderColor = '#27ae60';
                 totalAmountInput.style.backgroundColor = '#f8fff8';
