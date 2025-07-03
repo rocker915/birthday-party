@@ -299,7 +299,7 @@
 
             <div class="form-group" id="bank-code-group">
                 <label for="bank-code" class="form-label">匯款帳號後5碼 *</label>
-                <h5>匯款帳號：(822) 2675 4018 1455</h5>
+                <h5>匯款帳號：中國信託 (822) 2675 4018 1455</h5>
                 <input type="text" id="bank-code" name="entry.1279546451" class="form-input" required maxlength="5" placeholder="請輸入匯款帳號後5碼">
             </div>
 
@@ -413,6 +413,7 @@
         const totalAmountInput = document.getElementById('total-amount');
         const bankCodeLabel = document.querySelector('label[for="bank-code"]');
         const teamMembersInput = document.getElementById('team-members');
+        const bankCodeInput = document.getElementById('bank-code');
         const originalBankText = bankCodeLabel.textContent;
         
         function toggleAttendanceFields() {
