@@ -239,15 +239,23 @@
     <div class="form-container">
         <div class="form-header">
             <h1 class="form-title">紅圍巾ㄉ30歲生日辦桌</h1>
-            <p class="form-subtitle">🎉 日期：9/13 預計下午1點 📍 地點：雙北某活動中心</p>
+            <p class="form-subtitle">🎉 日期：9/13 預計下午1點準時開宴</p>
             <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 10px; margin-top: 15px; font-size: 14px; line-height: 1.6;">
-                <p>要30了，想辦個有趣的生日趴然後又很想吃辦桌，希望大家可以玩得開心！🍜</p>
-                <p style="margin-top: 10px;"><strong>入桌費：2000元 × 人數</strong></p>
-                <p><strong>匯款帳號：(822) 2675 4018 1455</strong></p>
+                <p>📍 <strong>地點：</strong>永安市民活動中心（新北市永和區安樂路431號）</p>
+                <p>🚇 <strong>交通：</strong>永安市場捷運站步行約7分鐘</p>
+                <p style="margin-top: 10px;">💰 <strong>入桌費：2000元 × 人數</strong></p>
+                <p>🏦 <strong>匯款帳號：(822) 2675 4018 1455</strong></p>
             </div>
         </div>
 
         <form id="customForm">
+            <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 15px; margin-bottom: 25px; border-left: 4px solid rgb(103, 58, 183);">
+                <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #444;">
+                    要30了，想辦個有趣的生日趴然後又很想吃辦桌，希望大家可以玩得開心然後也因為我認識讚朋友，當然最重要的是我也要開心，所以可以開始思考要送我的禮物了謝謝😄<br><br>
+                    不一定要送禮物啦，但知道我收到甚麼會開心的話，很樂意接收哈哈哈哈，寫個卡片或甚至只要出席就很棒了，也歡迎乾爹乾媽贊助酒水設備或其他東西，我會把你的名字標得很大，然後想致詞還是表演的歡迎跟我說 🎤✨
+                </p>
+            </div>
+
             <div class="form-group">
                 <label for="name" class="form-label">姓名 *</label>
                 <input type="text" id="name" name="entry.595180787" class="form-input" required placeholder="請輸入您的姓名">
@@ -264,22 +272,22 @@
             </div>
 
             <div class="form-group">
-                <label class="form-label">是否攜伴參加</label>
+                <label class="form-label">是否參加 *</label>
                 <div style="display: flex; gap: 20px; margin-top: 10px;">
                     <label style="display: flex; align-items: center; cursor: pointer;">
-                        <input type="radio" name="entry.914342359" value="是" style="margin-right: 8px;">
+                        <input type="radio" name="entry.818064203" value="是" style="margin-right: 8px;" required>
                         <span>是</span>
                     </label>
                     <label style="display: flex; align-items: center; cursor: pointer;">
-                        <input type="radio" name="entry.914342359" value="否" style="margin-right: 8px;">
+                        <input type="radio" name="entry.818064203" value="否" style="margin-right: 8px;" required>
                         <span>否</span>
                     </label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="companion" class="form-label">如果我認識你攜的伴請填他的名字</label>
-                <input type="text" id="companion" name="entry.815497036" class="form-input" placeholder="攜伴姓名（選填）">
+                <label for="team-members" class="form-label">如果想要組隊參加請填他(們)的名字</label>
+                <input type="text" id="team-members" name="entry.815497036" class="form-input" placeholder="組隊成員姓名（選填）">
             </div>
 
             <div class="form-group">
@@ -288,8 +296,24 @@
             </div>
 
             <div class="form-group">
+                <label for="total-amount" class="form-label">請填你匯的總金額（2000*總人數）*</label>
+                <input type="number" id="total-amount" name="entry.1088256305" class="form-input" required min="2000" step="2000" placeholder="請輸入匯款總金額">
+            </div>
+
+            <div class="form-group">
                 <label for="bank-code" class="form-label">匯款帳號後5碼 *</label>
                 <input type="text" id="bank-code" name="entry.1279546451" class="form-input" required maxlength="5" placeholder="請輸入匯款帳號後5碼">
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">有什麼想說的話嗎 (￣▽￣)</label>
+                <textarea id="message" name="entry.1434684631" class="form-input form-textarea" rows="4" placeholder="想對壽星說的話、期待的活動、或任何想分享的..."></textarea>
+            </div>
+
+            <div style="background: rgba(255,193,7,0.1); padding: 15px; border-radius: 10px; margin: 20px 0; border-left: 4px solid #ffc107;">
+                <p style="margin: 0; font-size: 14px; color: #856404;">
+                    💡 <strong>小提醒：</strong>有可能不會整桌都是認識的，剩下就靠我通靈感知大家的頻率了(￣▽￣)
+                </p>
             </div>
 
             <button type="submit" class="submit-btn">
@@ -301,7 +325,7 @@
         </form>
 
         <div id="successMessage" class="success-message">
-            🎉 報名成功！感謝你要來參加我的30歲生日辦桌！記得準時出席哦～
+            🎉 報名成功！感謝你要來參加我的30歲生日辦桌！記得9/13下午1點準時到永安市民活動中心哦～
         </div>
 
         <div id="errorMessage" class="error-message">
@@ -369,7 +393,7 @@
         });
         
         // 添加輸入欄位的動畫效果
-        document.querySelectorAll('.form-input, .form-select').forEach(input => {
+        document.querySelectorAll('.form-input, .form-select, textarea').forEach(input => {
             input.addEventListener('focus', function() {
                 this.parentElement.style.transform = 'scale(1.02)';
             });
@@ -379,8 +403,9 @@
             });
         });
 
-        // 自動計算費用
+        // 自動計算費用和匯款金額
         const totalPeopleInput = document.getElementById('total-people');
+        const totalAmountInput = document.getElementById('total-amount');
         const bankCodeLabel = document.querySelector('label[for="bank-code"]');
         const originalBankText = bankCodeLabel.textContent;
 
@@ -389,9 +414,36 @@
             const totalFee = people * 2000;
             
             if (people > 0) {
+                // 自動填入匯款金額
+                totalAmountInput.value = totalFee;
+                // 更新標籤顯示應付金額
                 bankCodeLabel.innerHTML = `${originalBankText} <span style="color: #e74c3c; font-weight: bold;">(應付金額: ${totalFee.toLocaleString()}元)</span>`;
+                // 添加視覺提示
+                totalAmountInput.style.borderColor = '#27ae60';
+                totalAmountInput.style.backgroundColor = '#f8fff8';
             } else {
+                totalAmountInput.value = '';
                 bankCodeLabel.textContent = originalBankText;
+                totalAmountInput.style.borderColor = '#e1e5e9';
+                totalAmountInput.style.backgroundColor = '#fff';
+            }
+        });
+
+        // 驗證匯款金額是否正確
+        totalAmountInput.addEventListener('input', function() {
+            const people = parseInt(totalPeopleInput.value) || 0;
+            const expectedAmount = people * 2000;
+            const actualAmount = parseInt(this.value) || 0;
+            
+            if (people > 0 && actualAmount !== expectedAmount) {
+                this.style.borderColor = '#e74c3c';
+                this.style.backgroundColor = '#fff5f5';
+            } else if (people > 0 && actualAmount === expectedAmount) {
+                this.style.borderColor = '#27ae60';
+                this.style.backgroundColor = '#f8fff8';
+            } else {
+                this.style.borderColor = '#e1e5e9';
+                this.style.backgroundColor = '#fff';
             }
         });
     </script>
