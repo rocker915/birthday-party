@@ -13,7 +13,11 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #2c2c2c 100%);
+            background-image: url('pikachu_background.jpg');
+            background-repeat: repeat; /* 重複填滿 */
+            background-size: auto; /* 保持原始大小重複 */
+            background-position: top left; /* 從左上角開始 */
+            background-attachment: fixed; /* 背景固定不隨捲動 */
             min-height: 100vh;
             display: flex;
             justify-content: center;
